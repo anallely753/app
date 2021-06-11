@@ -14,17 +14,16 @@ class CreateCoursesTable extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->text('nombre');
-            $table->date('fecha-inicio');
-            $table->date('fechafin');
-            $table->time('hora-inicio');
-            $table->time('hora-fin');
-            $table->text('temario');//Ruta al archivo
-            $table->text('antecedentes');
-            $table->text('material');
-            $table->text('lugar');
-            $table->text('cupo');
-            $table->text('dias');
+
+            $table->string('course-id');
+            $table->string('nombre');
+            $table->string('date-start');
+            $table->string('date-end');
+            $table->string('time-start');
+            $table->string('time-end');
+            $table->string('temario');//Ruta al archivo
+            $table->string('lugar');
+            $table->string('cupo');            
             $table->text('costo-unam');
             $table->text('costo-externo');
             $table->text('costo-general');
